@@ -1,0 +1,149 @@
+#var{
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    font-size: 30px;
+    font-family: "Arial";
+}
+
+.test{
+    color: red;
+}
+
+body{
+    font-family: "Arial";
+}
+.test{
+    text-align: center;
+    margin-top: 20px;
+    font-size: 30px;
+    color: black;
+    background-color: aqua;
+    padding: 15px;
+    margin: 15px;
+    border: 7px solid black;
+    border-radius: 100px;
+    font-family: "Arial";
+}
+
+#N1{
+    width: 500px;
+    height: 500px;
+    margin-right: 50px;
+}
+
+#N2{
+    width: 900px;
+    height: 500px;
+}
+
+.line{
+    vertical-align: top;
+    display: inline-block;
+}
+
+.text{
+    font-size: 20px;
+}
+
+.inp{
+    width: 200px;
+}
+select{
+    width: 200px;
+}
+#inputs{
+    display: flex;
+    justify-content: space-around;
+}
+.in{
+}
+
+button{
+    width: 150px;
+    height: 50px;
+    position: relative;
+}
+
+#goButton{
+    top: 50px;
+    left: 50px
+}
+
+#clear{
+    top: 60px;
+    left: 50px;
+}
+
+table{
+    width: 600px;
+
+}
+
+
+tr{
+    height: 50px;
+}
+
+#table-scroll{
+    width: 600px;
+    position: relative;
+    left: 300px;
+    top:-50px;
+    height: 400px;
+    overflow: auto;
+    overflow-x: hidden;
+}
+
+
+
+#R1{
+    position: absolute;
+    font-size: 40px;
+    top: 440px;
+    left: 400px;
+}
+
+#R2{
+    position: absolute;
+    font-size: 40px;
+    top: 440px;
+    left: 310px;
+}
+
+#R3{
+    position: absolute;
+    font-size: 40px;
+    top: 250px;
+    left: 210px;
+}
+
+
+#R4{
+    position: absolute;
+    font-size: 40px;
+    top: 330px;
+    left: 180px;
+}
+
+.test:hover{
+    color: white;
+    background-color: black;
+    transition: 3s all;
+}
+
+
+.myCanvas{
+    cursor: pointer;
+}
+
+.R{
+    cursor: pointer;
+}
+
+.inviz{
+    display: none;
+}
+
+
+
