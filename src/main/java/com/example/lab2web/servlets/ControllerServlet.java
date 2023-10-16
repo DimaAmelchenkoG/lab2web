@@ -18,10 +18,13 @@ public class ControllerServlet extends jakarta.servlet.http.HttpServlet{
     public void init(ServletConfig config) throws ServletException {
     }
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        System.out.println("CONTROLLER GET");
+        request.setAttribute("headServlet", "/controller");
         request.getRequestDispatcher("/area-check-servlet").forward(request, response);
     }
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String action = request.getParameter("action");
+        request.setAttribute("headServlet", "/controller");
         switch (action){
             case "update":
                 System.out.println("POST CONTROLLER UPDATE");

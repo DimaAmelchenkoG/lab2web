@@ -8,7 +8,7 @@ public class CreatePoint {
         Point point = new Point();
         CheckPoint checkPoint = new CheckPoint();
         point.setX(x);
-        point.setY(y);
+        point.setY(y.replace(",", "."));
         point.setR(r);
         point.setTarget(checkPoint.checkAll(point));
         point.setDate(LocalTime.now().withNano(0));

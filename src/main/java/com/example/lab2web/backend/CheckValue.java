@@ -4,14 +4,14 @@ public class CheckValue {
 
     public boolean ckeck(String xStr, String yStr, String rStr){
         float x = Float.parseFloat(xStr);
-        float y = Float.parseFloat(yStr);
+        float y = Float.parseFloat(yStr.replace(",", "."));
         float r = Float.parseFloat(rStr);
 
         System.out.println(x + " " + y + " " + r);
         return (checkX(x) & checkY(y) & checkR(r));
     }
 
-    public static boolean checkX(float x){
+    private static boolean checkX(float x){
         if (x >= -8.3 & x <= 8.3){
             return true;
         } else {
@@ -19,7 +19,7 @@ public class CheckValue {
         }
     }
 
-    public static boolean checkY(float y){
+    private static boolean checkY(float y){
         if (y > -8.3 & y < 8.3){
             return true;
         } else {
@@ -27,7 +27,7 @@ public class CheckValue {
         }
     }
 
-    public static boolean checkR(float r){
+    private static boolean checkR(float r){
         if (r >= 1 & r <= 5){
             return true;
         } else {

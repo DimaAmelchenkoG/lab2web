@@ -29,4 +29,14 @@ public class PointCollection {
         return pointArrayList.toString();
     }
 
+    @Override
+    public int hashCode() {
+        return Float.hashCode(pointArrayList.hashCode());
+    }
+
+    public boolean equals(Object obj) {
+        return equals(pointArrayList);
+    }
+
+
 }
