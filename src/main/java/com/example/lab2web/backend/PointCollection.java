@@ -2,9 +2,10 @@ package com.example.lab2web.backend;
 
 import com.example.lab2web.backend.Point;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class PointCollection {
+public class PointCollection implements Serializable {
     private ArrayList<Point> pointArrayList= new ArrayList();
 
     public PointCollection(){}

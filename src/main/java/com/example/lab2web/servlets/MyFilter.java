@@ -19,7 +19,7 @@ public class MyFilter implements Filter {
         String path = httpServletRequest.getServletPath();
         System.out.println("doFilter");
         if (path.equals("/controller")) {
-            System.out.println("doFilter");
+            System.out.println("doFilter TRUE");
             filterChain.doFilter(servletRequest, servletResponse);
         } else {
             httpServletResponse.setStatus(400);
