@@ -7,9 +7,11 @@ import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 public class MyFilter implements Filter {
+    private String servletCheck;
     @Override
     public void init(FilterConfig filterConfig) throws ServletException {
         Filter.super.init(filterConfig);
+        servletCheck = "/controller";
     }
 
     @Override
@@ -17,12 +19,14 @@ public class MyFilter implements Filter {
         HttpServletRequest httpServletRequest = (HttpServletRequest) servletRequest;
         HttpServletResponse httpServletResponse = (HttpServletResponse) servletResponse;
         String path = httpServletRequest.getServletPath();
-        System.out.println("doFilter");
-        if (path.equals("/controller")) {
-            System.out.println("doFilter TRUE");
+        if (path.equals(servletCheck)) {
             filterChain.doFilter(servletRequest, servletResponse);
         } else {
             httpServletResponse.setStatus(400);
+            String pathError = "/html/error.html";
+            ServletContext servletContext = httpServletRequest.getServletContext();
+            RequestDispatcher requestDispatcher = servletContext.getRequestDispatcher(pathError);
+            requestDispatcher.forward(httpServletRequest, httpServletResponse);
         }
     }
 
